@@ -1,0 +1,25 @@
+{
+  "files": {
+    "main.css": "/louise-portfolio/static/css/main.c4797f57.css",
+    "main.js": "/louise-portfolio/static/js/main.92a86b99.js",
+    "static/media/bannerlarge.png": "/louise-portfolio/static/media/bannerlarge.cfa8276003d2e9a24f6f.png",
+    "static/media/1 (1).png": "/louise-portfolio/static/media/1 (1).a8e3f194800ca2d5d417.png",
+    "static/media/1 (6).png": "/louise-portfolio/static/media/1 (6).005cd98862686b6be666.png",
+    "static/media/1 (4).png": "/louise-portfolio/static/media/1 (4).9f73c170750117fe42d3.png",
+    "static/media/1 (3).png": "/louise-portfolio/static/media/1 (3).8fd4c9fb6eb09d169103.png",
+    "static/media/1 (5).png": "/louise-portfolio/static/media/1 (5).c00a2944097db0860efe.png",
+    "static/media/1 (10).png": "/louise-portfolio/static/media/1 (10).b81a532ceec435031218.png",
+    "static/media/1 (7).png": "/louise-portfolio/static/media/1 (7).1a96bef4f874a46841ad.png",
+    "static/media/1 (8).png": "/louise-portfolio/static/media/1 (8).f559303d2f34634a0e67.png",
+    "static/media/1 (2).png": "/louise-portfolio/static/media/1 (2).16b0e3dac986b30dc579.png",
+    "static/media/me.png": "/louise-portfolio/static/media/me.f7a02366b707b22c9c64.png",
+    "static/media/Montserrat-Bold.ttf": "/louise-portfolio/static/media/Montserrat-Bold.99439e3dc4aae040caa5.ttf",
+    "index.html": "/louise-portfolio/index.html",
+    "main.c4797f57.css.map": "/louise-portfolio/static/css/main.c4797f57.css.map",
+    "main.92a86b99.js.map": "/louise-portfolio/static/js/main.92a86b99.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.c4797f57.css",
+    "static/js/main.92a86b99.js"
+  ]
+}
