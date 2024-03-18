@@ -1,0 +1,32 @@
+.navs{
+height: 100lvh;
+width: 100vw;
+z-index: 5;
+position: fixed;
+top: 0;
+pointer-events: none;
+}
+.navs > *{
+    pointer-events: auto;
+}
+.navlouise{
+    color: transparent;
+    -webkit-text-stroke: 1px;
+    position: fixed;
+    top: 1.5rem;
+    left: 2rem;
+}
+.socials-container{
+    position: fixed;
+    bottom: 5lvh;
+    left: 3.6rem;
+    height: 10rem;
+    border-radius: 25rem;
+    border: white solid 1px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0.2rem;
+
+}

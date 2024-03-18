@@ -1,0 +1,54 @@
+  .mainbg{
+    position: fixed;
+    z-index: 1;
+    display: flex;
+    height: 100lvh;
+    width: 100lvw;
+    background: black;
+    justify-content: center;
+    align-items: center;
+    background-size: cover;
+    
+  }
+  .mainbg .fade{
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    background-size: cover;
+  }
+  .circle{
+    z-index: 5;
+    background: linear-gradient(to bottom right, rgba(106,106,106,1), rgba(0,0,0,1) );
+    opacity: 0.2;
+    width: 700px;
+    height: 700px;
+    border-radius: 500px;
+  }
+  .bgoverlay{
+    position: absolute;
+    z-index: 4;
+    background-color: black;
+    opacity: 0.5;
+    height: 100%;
+    width: 100%;
+  }
+  .zero{
+    background: url('../../assets/image/0.png');
+    z-index: 4;
+  }
+  .one{
+    background: url('../../assets/image/1.png');
+    z-index: 3;
+  }
+  .two{
+    background: url('../../assets/image/2.png');
+    z-index: 2;
+  }
+  .three{
+    background: url('../../assets/image/3.png');
+    z-index: 1;
+  }
+  .four{
+    background: url('../../assets/image/4.png');
+    z-index: 0;
+  }

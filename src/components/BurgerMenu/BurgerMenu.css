@@ -1,0 +1,38 @@
+    .burgercontainer{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: row;
+        height: auto;
+        
+    }
+    .McButton{
+        position: fixed;
+        width: 2rem;
+        height: 3rem;
+        border-radius: 45px;
+        justify-content: center;
+        display: block;
+        align-items: center;
+        cursor: pointer;
+        top: 1.25rem;
+        right: 3.8rem;
+    }
+
+
+    .McButton b{
+        display: block;
+        position: absolute;
+        width: 100%;
+        height: 3px;
+        right: 0;
+    }
+    .one{
+        top: 25%;
+    }
+    .two{
+        top: 50%;
+    }
+    .three{
+        top: 75%;
+    }

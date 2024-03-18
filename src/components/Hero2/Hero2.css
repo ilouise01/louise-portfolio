@@ -1,0 +1,188 @@
+
+.louise h1, .logo, .about-title, .mons, .learnmorebtn, .mons .word .char{
+    font-family: mons !important;
+    
+}
+.word{
+  overflow: hidden;
+}
+.front-text{
+  color: transparent;
+  -webkit-text-stroke: 2px;
+}
+.container{
+    width: 100%;
+    height: 500lvh;
+    z-index: 2;
+    position: relative;
+}
+.hero-container{
+  overscroll-behavior: none;
+  width: 200%;
+  height: 100lvh;
+  display: flex;
+  flex-wrap: nowrap;
+  position: sticky;
+  align-self: flex-start;
+  top: 0;
+
+}
+.panel{
+    width: 100%;
+    height: 100%;
+}
+.hero{
+    display: flex;
+    background-color: rgba(0, 0, 0, 0);
+    z-index: 3;
+    justify-content: top;
+    align-items: center;
+    flex-direction: column;
+}
+.about{
+    background-color: rgba(0, 0, 0, 0);
+    align-items: center;
+    justify-content: center;
+    display: flex;
+}
+.about-title{
+  writing-mode: vertical-rl;
+  text-orientation: upright;
+  margin-left: 25%;
+}
+.test{
+    background-color: transparent;
+    height: 100lvh;
+    width: 100%;
+    z-index: 3;
+    position: absolute;
+}
+.me{
+  height: 100lvh;
+  width: 100vw;
+  background: url('../../assets/image/Louise.png');
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: absolute;
+  z-index: 2;
+  opacity: 1;
+}
+.herocontainer{
+    width: 50%;
+    display: flex;
+  }
+  .herocontainer div{
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+  }
+  .herocontainer div h1{
+    display: inline-block;
+    color: transparent;
+    -webkit-text-stroke: 3px;
+    margin: 0;
+  }
+  .herocontainer div h4{
+   font-weight: 500;
+  }
+  .hi{
+    line-height: 1.1;
+    font-weight: bolder;
+  }
+  .hi h1{
+    font-weight: 900;
+    color: white !important;
+    -webkit-text-stroke-width: 0 !important;
+  }
+  .louise{
+    margin-top: 15%;
+    line-height: 0.8;
+  }
+  .dnd h4{
+    line-height: 0.8;
+    margin-top: 60;
+  }
+  .front{
+    z-index: 3;
+  }
+  .back{
+    position: absolute;
+    width: 100vw;
+    right: 0;
+  }
+  .left{
+    align-items: center;
+    display: flex;
+    height: 100%;
+    flex: 2;
+  }
+  .right{
+    display: flex;
+    height: 100%;
+    flex: 3;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    padding: 20px;
+  }
+  .learnmorebtn{
+    padding: 15px 45px;
+    border-radius: 30px;
+  }
+  .aboutinfo, .aboutinfo2{
+    font-weight: 600 !important;
+    font-size: 5rem;
+    line-height: 130%;
+    margin: 0;
+  }
+  .aboutinfo strong{
+    color: #3996EB;
+  }
+  .aboutinfo2 strong{
+    color: transparent;
+    -webkit-text-stroke-color: #3996EB;
+  }
+  
+  .abtme{
+    letter-spacing: 0.4rem;
+  }
+  .abtme2{
+    letter-spacing: 0.4rem;
+  }
+  
+
+
+  /* Mobile View */
+@media only screen and (max-width: 800px) {
+  .left{
+    display: none;
+  }
+  .herocontainer{
+    width: 80%;
+  }
+  .container{
+    height: 250lvh;
+  }
+  .aboutinfo{
+    font-size: 4.50rem;
+    width: 100%;
+  }
+  .about-title{
+    font-size: 6rem;
+  }
+
+}
+
+
+.loader{
+  display: flex;
+  height: 100vh;
+  width: 100%;
+  z-index: 3;
+  background-color: #0D0D0D;
+  overflow: hidden;
+  justify-content: center;
+  align-items: center;
+
+}

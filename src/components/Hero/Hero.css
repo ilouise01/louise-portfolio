@@ -1,0 +1,32 @@
+.hero{
+  width: 100vw;
+  height: 100lvh;
+  background: 
+  linear-gradient(to bottom, rgba(0, 0, 0, 0),rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.9)),
+  url('../../assets/image/bannerlarge.png');
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  z-index: 1;
+}
+.louise h1 .word{
+  width: 50vw;
+  display: flex !important;
+  justify-content: space-between;
+  margin-top: 10lvh;
+}
+.louise h1 .word .char{
+  font-family: mons !important;
+}
+.dnd h4 {
+  width: 50vw;
+  display: flex !important;
+  justify-content: space-between;
+}
+.dnd h4 .word, .dnd h4 strong, .dnd h4 strong .word{
+  display: flex !important;
+  flex:1;
+  justify-content: space-around;
+}
