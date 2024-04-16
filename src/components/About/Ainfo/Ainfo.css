@@ -28,6 +28,11 @@
     position: absolute;
     top: 0;
 }
+.ititle h4{
+    font-weight: bold;
+    letter-spacing: 0.3rem;
+    
+}
 .icontainer{
     padding-top: 3rem;
 }

@@ -68,7 +68,7 @@
   }
   
   /* For mobile devices */
-  @media only screen and (max-width: 400px) {
+  @media only screen and (max-width: 500px) {
     .apic{
         padding-top: 5rem;
         height: 30lvh;
