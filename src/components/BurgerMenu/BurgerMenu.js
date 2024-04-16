@@ -103,7 +103,7 @@ function BurgerMenu({ openburger, burgerOpen}) {
 
   return (
     <div className='burgercontainer'>
-        <a class="McButton" data="hamburger-menu" onClick={openburger} onMouseEnter={burgerhover} onMouseLeave={burgerleave}>
+        <a className="McButton" data="hamburger-menu" onClick={openburger} onMouseEnter={burgerhover} onMouseLeave={burgerleave}>
                 <b className='one' style={{background: darkTheme.Secondary}}></b>
                 <b className='two' style={{background: darkTheme.Secondary}}></b>
                 <b className='three' style={{background: darkTheme.Secondary}}></b>

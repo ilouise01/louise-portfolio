@@ -333,32 +333,32 @@ function horizontalLoop(items, config) {
   return (
           <div className='hs-container'>
             <h5>SKILLS</h5>
-            <div class="wrapper">
-                <div class="box">
+            <div className="wrapper">
+                <div className="box">
                     <FontAwesomeIcon icon={faHtml5} size='2xl'/>
                     <h6>HTML5</h6>
                 </div>
-                <div class="box">
+                <div className="box">
                     <FontAwesomeIcon icon={faCss3Alt} size='2xl'/>
                     <h6>CSS3</h6>
                 </div>
-                <div class="box">
+                <div className="box">
                     <FontAwesomeIcon icon={faJs} size='2xl'/>
                     <h6>Javascript</h6>
                 </div>
-                <div class="box">
+                <div className="box">
                     <FontAwesomeIcon icon={faReact} size='2xl'/>
                     <h6>React</h6>
                 </div>
-                <div class="box">
+                <div className="box">
                     <FontAwesomeIcon icon={faPhp} size='2xl'/>
                     <h6>PHP</h6>
                 </div>
-                <div class="box">
+                <div className="box">
                     <FontAwesomeIcon icon={faBootstrap} size='2xl'/>
                     <h6>Bootstrap</h6>
                 </div>
-                <div class="box">
+                <div className="box">
                     <FontAwesomeIcon icon={faDatabase} size='2xl'/>
                     <h6>MySQL</h6>
                 </div>
