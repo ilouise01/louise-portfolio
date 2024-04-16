@@ -65,18 +65,18 @@ function Ainfo() {
           
         });
         i01.addLabel("start")
-        i01.to(".i01",{position: 'sticky', top: '21lvh',}, 'start')
-        i01.to(".i02",{position: 'sticky', top: '24lvh',}, 'start')
-        i01.to(".i03",{position: 'sticky', top: '27lvh',}, 'start')
-        i01.to(".i04",{position: 'sticky', top: '30lvh',}, 'start')
-        i01.to(".i05",{position: 'sticky', top: '33lvh',}, 'start')
+        i01.to(".i01",{position: 'sticky', top: '10lvh',}, 'start')
+        i01.to(".i02",{position: 'sticky', top: '13lvh',}, 'start')
+        i01.to(".i03",{position: 'sticky', top: '17lvh',}, 'start')
+        i01.to(".i04",{position: 'sticky', top: '20lvh',}, 'start')
+        i01.to(".i05",{position: 'sticky', top: '23lvh',}, 'start')
 
         let i02 = gsap.timeline({
           // yes, we can add it to an entire timeline!
           scrollTrigger: {
             trigger: ".i05",
-            start: "80% center",
-            end: "110% center",
+            start: "center center",
+            end: "bottom center",
             
             scrub: 0.3,
           }
