@@ -47,7 +47,7 @@
     transform: translateX(-5rem);
 }
 .row-2{
-    transform: translateX(-30rem);
+    transform: translateX(-20rem);
 }
 .row-3{
     transform: translateX(-5rem);
@@ -112,3 +112,25 @@
     background-size: cover;
     background-position: center;
 }
+
+
+
+/* For mobile devices */
+@media only screen and (max-width: 500px) {
+    /* Adjust styles here */
+    .works-row{
+        height: 100%;
+        width: 300%;
+    
+    }
+    .work-canvas{
+        width: 75rem;
+        height: 25rem;
+        margin-left: 2rem;
+    }
+    
+    .works-bottom{
+        transform: scale(0.8) rotateX(45deg) rotateY(-8deg) rotateZ(27deg) translateX(0px) translateY(0px) translateZ(0px) skewX(0deg) skewY(0deg);
+    }
+  
+  }  

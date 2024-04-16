@@ -1,7 +1,7 @@
 .menu{
     height: 100lvh;
     width: 100vw;
-    z-index: 4;
+    z-index: 20;
     position: fixed;
     top: 0;
     display: none;
@@ -24,6 +24,7 @@
 .menu-container h2 h5{
     opacity: 1;
     transform: translateX(300);
+    
 }
 .menu-container h2 .h5parent{
     display: flex;
@@ -49,6 +50,20 @@
     left: 100%;
     transform: translate(0%, -50%);
 }
-.menu-link{
-    -webkit-text-stroke: 1px;
+.menu-link a{
+    -webkit-text-stroke: 1px white;
+    text-decoration: none;
+    color: white;
+    
 }
+
+ /* For tablets (portrait) */
+ @media only screen and (max-width: 768px) {
+    .menu-circle{
+        height: 150lvh;
+    }
+    .menu-container{
+        padding-left: 5rem;
+        
+    }
+  }  

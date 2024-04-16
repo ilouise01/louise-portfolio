@@ -12,27 +12,63 @@ function HeroWorks() {
     
     gsap.registerPlugin(ScrollTrigger);
     useGSAP(() =>{
-      let workanim = gsap.timeline({
-        // yes, we can add it to an entire timeline!
-        scrollTrigger: {
-          trigger: ".works-wrapper",
-          start: "top top",
-          end: "bottom bottom",
-          scrub: 0.3,
-          markers: true,
-        }
+      let mm = gsap.matchMedia();
+
+      mm.add("(min-width: 501px)", () => {
+        // desktop setup code here...
+        let workanim = gsap.timeline({
+          // yes, we can add it to an entire timeline!
+          scrollTrigger: {
+            trigger: ".works-wrapper",
+            start: "top top",
+            end: "bottom bottom",
+            scrub: 0.3,
+            markers: true,
+          }
+        });
+        workanim.addLabel("start")
+        workanim.to(".works-bottom",{rotateX: 0, rotateY: 0, rotateZ: 0, top: '40%', }, 'start')
+        workanim.to(".work-canvas",{opacity: 1,}, 'start')
+        workanim.to(".row-1",{translateX: '0rem'}, 'start')
+        workanim.to(".row-2",{translateX: '-10rem'}, 'start')
+        workanim.to(".row-3",{translateX: '0rem'}, 'start')
+        
+        workanim.addLabel("end")
+        workanim.to(".row-1",{translateX: '-35rem'}, 'end')
+        workanim.to(".row-2",{translateX: '20rem'}, 'end')
+        workanim.to(".row-3",{translateX: '-35rem'}, 'end')
+  
+        
       });
-      workanim.addLabel("start")
-      workanim.to(".works-bottom",{rotateX: 0, rotateY: 0, rotateZ: 0, top: '40%', }, 'start')
-      workanim.to(".work-canvas",{opacity: 1,}, 'start')
-      workanim.to(".row-1",{translateX: '0rem'}, 'start')
-      workanim.to(".row-2",{translateX: '-20rem'}, 'start')
-      workanim.to(".row-3",{translateX: '20rem'}, 'start')
+
+      mm.add("(max-width: 500px)", () => {
+        // mobile setup code here...
+        let workanim = gsap.timeline({
+          // yes, we can add it to an entire timeline!
+          scrollTrigger: {
+            trigger: ".works-wrapper",
+            start: "top top",
+            end: "bottom bottom",
+            scrub: 0.3,
+            markers: true,
+          }
+        });
+        workanim.addLabel("start")
+        workanim.to(".works-bottom",{rotateX: 0, rotateY: 0, rotateZ: 0, top: '40%', }, 'start')
+        workanim.to(".work-canvas",{opacity: 1,}, 'start')
+        workanim.to(".row-1",{translateX: '0rem'}, 'start')
+        workanim.to(".row-2",{translateX: '-95rem'}, 'start')
+        workanim.to(".row-3",{translateX: '0rem'}, 'start')
+        
+        workanim.addLabel("end")
+        workanim.to(".row-1",{translateX: '-95rem'}, 'end')
+        workanim.to(".row-2",{translateX: '0rem'}, 'end')
+        workanim.to(".row-3",{translateX: '-95rem'}, 'end')
+  
+        
+      });
       
-      workanim.addLabel("end")
-      workanim.to(".row-1",{translateX: '-35rem'}, 'end')
-      workanim.to(".row-2",{translateX: '20rem'}, 'end')
-      workanim.to(".row-3",{translateX: '-35rem'}, 'end')
+      
 
   
     })

@@ -136,7 +136,7 @@ small, .text_small {
  .background--custom {
     background-color: #FFFFFF;
     width: 100vw;
-    height: 100vh;
+    height: 100lvh;
     position: absolute;
     overflow: hidden;
     z-index: -2;
@@ -154,4 +154,7 @@ small, .text_small {
     --gradient-color-3: #292929;  
     --gradient-color-4: #000000;
     --gradient-speed: 0.000009999999999999999;
+  }
+  .disable-scroll {
+    overflow: hidden;
   }

@@ -14,7 +14,7 @@ import { faGithub, faLinkedin } from '@fortawesome/free-brands-svg-icons'
 
 
 
-function Navs({timeline}) {
+function Navs({openburger, burgerOpen}) {
   
     useEffect(() => {
      
@@ -28,7 +28,7 @@ function Navs({timeline}) {
 
   return (
         <div className='navs'>
-            <BurgerMenu/>
+            <BurgerMenu openburger={openburger} burgerOpen={burgerOpen}/>
             <h5 className='navlouise mons' style={{WebkitTextStrokeColor: darkTheme.Secondary, }}>LOUISE</h5>
             <div className='socials-container'>
                 <FontAwesomeIcon icon={faGithub} size='2xl'/>

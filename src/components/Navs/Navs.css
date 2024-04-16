@@ -1,7 +1,7 @@
 .navs{
 height: 100lvh;
 width: 100vw;
-z-index: 5;
+z-index: 25;
 position: fixed;
 top: 0;
 pointer-events: none;
@@ -30,3 +30,34 @@ pointer-events: none;
     padding: 0.2rem;
 
 }
+
+
+  
+  /* For tablets (portrait) */
+  @media only screen and (max-width: 768px) {
+    .navlouise{
+        font-size: 3rem;
+    }
+    .socials-container{
+        height: 15rem;
+        width: 4rem;
+    }
+    .fa-2xl{
+        font-size: 3.5rem;
+    }
+    
+  }
+  
+  /* For mobile devices */
+  @media only screen and (max-width: 481px) {
+    .navlouise{
+        font-size: 3rem;
+    }
+    .socials-container{
+        height: 15rem;
+        width: 4rem;
+    }
+    .fa-2xl{
+        font-size: 3.5rem;
+    }
+  }  

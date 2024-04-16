@@ -55,4 +55,19 @@
 }
 
 
+/* For mobile devices */
+@media only screen and (max-width: 1024px) {
+    /* Adjust styles here */
+    .ha-container{
+        width: 85%;
+    }
+    .ha-top h2,.ha-bottom h2 {
+        font-size: 4rem;
+    }
+    .ha-top, .ha-bottom{
+        justify-content: center;
+        align-items: center;
+    }
+  
+  }  
 

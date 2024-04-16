@@ -1,12 +1,27 @@
 import React, { useEffect, useRef, useState } from 'react';
+import { BrowserRouter as Router, Route, Routes, useLocation } from 'react-router-dom'
+import { TransitionGroup, CSSTransition } from 'react-transition-group';
 import gsap from 'gsap'; // Import GSAP
 import { darkTheme } from './theme';
 import Home from './components/Home/Home';
+import About from './components/About/About';
+import Works from './components/Works/Works'
 import Mouse from './components/Mouse/Mouse'
 import {Helmet} from 'react-helmet';
 
+import Navs from './components/Navs/Navs';
+import Menu from './components/Menu/Menu';
 
 function App() {
+
+  
+
+  const [burgerOpen, setBurgerOpen] = useState(false);
+
+  const openburger = () => {
+    setBurgerOpen(!burgerOpen);
+  };
+
   
 
   const canvasRef = useRef(null);
@@ -64,7 +79,17 @@ function App() {
             {/* Add more meta tags as needed */}
         </Helmet>
         <Mouse></Mouse>
-        <Home />
+        <Router>
+        <Navs openburger={openburger} burgerOpen={burgerOpen} />
+        <Menu openburger={openburger} burgerOpen={burgerOpen} />
+        <Routes>
+          <Route exact path="/" element={<Home />} />
+          <Route exact path="/louise-portfolio" element={<Home />} />
+          <Route exact path="/works" element={<Works />} />
+          <Route exact path="/about" element={<About />} />
+        </Routes>
+        </Router>
+        
     </div>
   );
 }

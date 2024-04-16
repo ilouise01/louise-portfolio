@@ -3,6 +3,8 @@ import gsap from 'gsap';
 import { ScrollTrigger } from 'gsap/dist/ScrollTrigger';
 import SplitType from 'split-type'
 import Apic from './Apic/Apic';
+import Ainfo from './Ainfo/Ainfo';
+import HomeFooter from '../Home/HomeFooter/HomeFooter';
 
 import './About.css'
 import { darkTheme } from '../../theme';
@@ -22,6 +24,8 @@ function About() {
   return (
     <div className='about'>
         <Apic />
+        <Ainfo />
+        <HomeFooter />
     </div>
         
 

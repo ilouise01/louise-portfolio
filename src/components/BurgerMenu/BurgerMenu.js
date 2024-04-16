@@ -3,13 +3,11 @@ import gsap from 'gsap';
 import './BurgerMenu.css'
 import { darkTheme } from '../../theme';
 
-function BurgerMenu({timeline}) {
+function BurgerMenu({ openburger, burgerOpen}) {
   
-    const [burgerOpen, setBurgerOpen] = useState(false);
+    
 
-    const ham = useRef()
     const hamtl = useRef()
-    const menu = useRef()
     const menutl = useRef()
 
     
@@ -26,9 +24,6 @@ function BurgerMenu({timeline}) {
         gsap.to('.trail' ,{backgroundColor: 'transparent', opacity: '1', height: '15px', width: '15px',});
         
         
-    }
-    function openburger() {
-        setBurgerOpen(!burgerOpen)
     }
     
 
@@ -79,7 +74,7 @@ function BurgerMenu({timeline}) {
             menutl.current.to('.menu-container h2 h5',{opacity: 0, translateX: 300,duration: 0.01,}, 'menuitems1')
 
             .add('menuitems2')
-            menutl.current.to('.menu-circle',{left: '60%',borderRadius: '100rem', duration: 0.5}, 'menuitems2')
+            menutl.current.to('.menu-circle',{left: '70%',borderRadius: '100rem', duration: 0.5}, 'menuitems2')
             menutl.current.to('.menu-container h2',{opacity: 1,translateX: 0, stagger: 0.1, delay: 0.5,}, 'menuitems2')
             menutl.current.to('.menu-container h2 h5',{opacity: 1,translateX: 0, stagger: 0.1,}, 'menuitems2')
 
@@ -91,9 +86,11 @@ function BurgerMenu({timeline}) {
   }, []);
 
   useEffect(() => {
+    const body = document.body;
 
     burgerOpen ? hamtl.current.play() : hamtl.current.reverse()
     burgerOpen ? menutl.current.play() : menutl.current.reverse()
+    burgerOpen ? body.classList.add('disable-scroll') : body.classList.remove('disable-scroll')
 
   }, [burgerOpen])
   

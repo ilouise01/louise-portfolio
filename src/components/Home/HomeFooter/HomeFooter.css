@@ -6,6 +6,7 @@
     align-items: center;
     flex-direction: column;
     color: black;
+    z-index: 10;
 }
 .hf-content{
     background: #00A2E2;
@@ -17,6 +18,7 @@
     align-items: center;
     flex-direction: column;
     border-radius: 2rem;
+    z-index: 10;
 
 }
 .hf-top, .hf-mid, .hf-bot{

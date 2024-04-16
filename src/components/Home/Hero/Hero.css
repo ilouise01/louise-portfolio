@@ -5,6 +5,7 @@
   linear-gradient(to bottom, rgba(0, 0, 0, 0),rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.9)),
   url('../../../assets/image/bannerlarge.png');
   background-size: cover;
+  background-repeat: no-repeat;
   background-position: center;
   display: flex;
   flex-direction: column;
@@ -30,3 +31,38 @@
   flex:1;
   justify-content: space-around;
 }
+
+
+
+/* For tablets (portrait) */
+@media only screen and (max-width: 768px) {
+  /* Adjust styles here */
+  .hero{
+    background-size: 250%;
+    background-position: 70% 100%;
+  }
+  .louise h1 .word{
+    width: 80vw;
+    margin-top: 10lvh;
+  }
+  .dnd h4 {
+    width: 80vw;
+  }
+}
+
+/* For mobile devices */
+@media only screen and (max-width: 500px) {
+  /* Adjust styles here */
+  .hero{
+    background-size: 450%;
+    background-position: 65% 100%;
+  }
+  .louise h1 .word{
+    width: 80vw;
+    margin-top: 10lvh;
+  }
+  .dnd h4 {
+    width: 70vw;
+  }
+
+}  

@@ -1,5 +1,5 @@
 .ball {
-  z-index: 5;
+  z-index: 30;
   width: 8px;
   height: 8px;
   position: fixed;
@@ -16,5 +16,13 @@
   height: 15px;
   width: 15px;
   background-color: transparent;
+
+}
+
+/* For tablets (portrait) */
+@media only screen and (max-width: 850px) {
+  .ball, .trail{
+    display: none;
+  }
 
 }

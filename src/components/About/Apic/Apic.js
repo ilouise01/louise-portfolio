@@ -23,8 +23,8 @@ function Apic() {
         <div className='mp-container'>
             <div className='my-picture'></div>
             <div className='abtfloat'><h1 className='mons'>ABOUT</h1><h1 className='mons'>ME</h1></div>
-            <div><h1 style={{fontSize:'28rem', color: 'black'}} className='mons'>IVAN</h1></div>
-            <div><h1 style={{fontSize:'28rem', color: 'black'}} className='mons'>LOUISE</h1></div>
+            <div><h1 className='mons ilouise'>IVAN</h1></div>
+            <div><h1 className='mons ilouise'>LOUISE</h1></div>
         </div>
     </div>
         

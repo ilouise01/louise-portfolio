@@ -1,0 +1,118 @@
+.ainfo{
+    display: flex;
+    background-color: black;
+    justify-content: center;
+    align-items: center;
+}
+.ai-container{
+    height: 100%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    position: relative;
+}
+.infos{
+    border-top: solid 1px #e1e1e1;
+    width: 79%;
+    height: 60lvh;
+    display: flex;
+    flex-direction: column;
+    padding: 1%;
+    background-color: black;
+    justify-content: center;
+    position: relative;
+}
+.ititle{
+    position: absolute;
+    top: 0;
+}
+.icontainer{
+    padding-top: 3rem;
+}
+.inumber{
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+    justify-content: center;
+}
+.inumber h1{
+    font-size: 15lvw;
+    opacity: 0.5;
+    font-weight: bold;
+}
+.icontent{
+    display: flex;
+    flex: 2;
+    flex-direction: column;
+    justify-content: center;
+    margin: auto;
+}
+.icontainer{
+    display: flex;
+    flex-direction: row;
+}
+.i01{
+    z-index: 1;
+}
+.i02{
+    z-index: 2;
+}
+.i03{
+    z-index: 3;
+}
+.i04{
+    z-index: 4;
+}
+.i05{
+    z-index: 5;
+}
+
+
+/* For tablets (portrait) */
+@media only screen and (max-width: 1024px) {
+    .icontent>h4{
+        font-size: 1.5rem;
+     }
+     .icontent>h5{
+         font-size: 1.4rem;
+      }
+      .icontent>h7{
+         font-size: 1.3rem;
+      }
+      .icontent>div>h4 ,.icontent>div>h5{
+         font-size: 1.5rem;
+      }
+      .icontent>div>h7{
+         font-size: 1.1rem;
+      }
+      .infos{
+         width: 90%;
+         height: 70lvh;
+     }
+    
+
+  }
+  
+  /* For mobile devices */
+  @media only screen and (max-width: 500px) {
+    .icontent>h4{
+       font-size: 2rem;
+    }
+    .icontent>h5{
+        font-size: 1.8rem;
+     }
+     .icontent>h7{
+        font-size: 1.5rem;
+     }
+     .icontent>div>h4 ,.icontent>div>h5{
+        font-size: 1.8rem;
+     }
+     .icontent>div>h7{
+        font-size: 1.4rem;
+     }
+     .infos{
+        width: 90%;
+    }
+  }  
