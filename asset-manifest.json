@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/louise-portfolio/static/css/main.2560dc89.css",
-    "main.js": "/louise-portfolio/static/js/main.9c1b2d11.js",
+    "main.css": "/louise-portfolio/static/css/main.bb3aeaaf.css",
+    "main.js": "/louise-portfolio/static/js/main.06cac924.js",
     "static/media/bannerlarge.png": "/louise-portfolio/static/media/bannerlarge.cfa8276003d2e9a24f6f.png",
     "static/media/Louise.png": "/louise-portfolio/static/media/Louise.ce3626c129286635445f.png",
     "static/media/1 (1).png": "/louise-portfolio/static/media/1 (1).a8e3f194800ca2d5d417.png",
@@ -16,11 +16,11 @@
     "static/media/me.png": "/louise-portfolio/static/media/me.f7a02366b707b22c9c64.png",
     "static/media/Montserrat-Bold.ttf": "/louise-portfolio/static/media/Montserrat-Bold.99439e3dc4aae040caa5.ttf",
     "index.html": "/louise-portfolio/index.html",
-    "main.2560dc89.css.map": "/louise-portfolio/static/css/main.2560dc89.css.map",
-    "main.9c1b2d11.js.map": "/louise-portfolio/static/js/main.9c1b2d11.js.map"
+    "main.bb3aeaaf.css.map": "/louise-portfolio/static/css/main.bb3aeaaf.css.map",
+    "main.06cac924.js.map": "/louise-portfolio/static/js/main.06cac924.js.map"
   },
   "entrypoints": [
-    "static/css/main.2560dc89.css",
-    "static/js/main.9c1b2d11.js"
+    "static/css/main.bb3aeaaf.css",
+    "static/js/main.06cac924.js"
   ]
 }
