@@ -24,7 +24,7 @@ function Ainfo() {
             trigger: ".ainfo",
             start: "top center",
             end: "bottom bottom",
-            markers: true,
+            
           }
           
         });
@@ -34,6 +34,20 @@ function Ainfo() {
         i01.to(".i03",{position: 'sticky', top: '24lvh',}, 'start')
         i01.to(".i04",{position: 'sticky', top: '31lvh',}, 'start')
         i01.to(".i05",{position: 'sticky', top: '38lvh',}, 'start')
+
+        let i02 = gsap.timeline({
+          // yes, we can add it to an entire timeline!
+          scrollTrigger: {
+            trigger: ".i05",
+            start: "80% center",
+            end: "110% center",
+            
+            scrub: 0.3,
+          }
+          
+        });
+        i02.addLabel("start")
+        i02.to(".ai-container",{opacity: 0,}, 'start')
         
       
       });
@@ -46,7 +60,7 @@ function Ainfo() {
             trigger: ".ainfo",
             start: "top center",
             end: "bottom bottom",
-            markers: true,
+            
           }
           
         });
@@ -56,6 +70,20 @@ function Ainfo() {
         i01.to(".i03",{position: 'sticky', top: '27lvh',}, 'start')
         i01.to(".i04",{position: 'sticky', top: '30lvh',}, 'start')
         i01.to(".i05",{position: 'sticky', top: '33lvh',}, 'start')
+
+        let i02 = gsap.timeline({
+          // yes, we can add it to an entire timeline!
+          scrollTrigger: {
+            trigger: ".i05",
+            start: "80% center",
+            end: "110% center",
+            
+            scrub: 0.3,
+          }
+          
+        });
+        i02.addLabel("start")
+        i02.to(".ai-container",{opacity: 0,}, 'start')
         
       
       });

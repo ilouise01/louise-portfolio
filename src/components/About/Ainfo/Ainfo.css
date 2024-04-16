@@ -3,6 +3,7 @@
     background-color: black;
     justify-content: center;
     align-items: center;
+    height: 400lvh;
 }
 .ai-container{
     height: 100%;

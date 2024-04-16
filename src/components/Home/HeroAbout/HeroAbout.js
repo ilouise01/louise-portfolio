@@ -32,7 +32,6 @@ function HeroAbout({timeline}) {
           start: "top 50%",
           end: "bottom bottom",
           scrub: 0.3,
-          markers: true,
         }
       });
       hanim.addLabel("start")

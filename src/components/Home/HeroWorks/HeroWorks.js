@@ -23,7 +23,6 @@ function HeroWorks() {
             start: "top top",
             end: "bottom bottom",
             scrub: 0.3,
-            markers: true,
           }
         });
         workanim.addLabel("start")

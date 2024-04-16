@@ -18,7 +18,6 @@ function HomeFooter() {
           start: "top center",
           end: "bottom bottom",
           scrub: 0.3,
-          markers: true,
         }
       });
       footeranim.addLabel("start")
@@ -31,7 +30,6 @@ function HomeFooter() {
           start: "30% center",
           end: "bottom bottom",
           scrub: 2,
-          markers: true,
         }
       });
       footeranimtext.addLabel("text")
