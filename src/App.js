@@ -79,7 +79,7 @@ function App() {
             {/* Add more meta tags as needed */}
         </Helmet>
         <Mouse></Mouse>
-        <Router basename="/">
+        <Router>
         <Navs openburger={openburger} burgerOpen={burgerOpen} />
         <Menu openburger={openburger} burgerOpen={burgerOpen} />
         <Routes>
