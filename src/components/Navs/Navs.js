@@ -4,7 +4,6 @@ import { ScrollTrigger } from 'gsap/ScrollTrigger';
 
 import './Navs.css'
 import { darkTheme } from '../../theme';
-import me from "../../assets/image/me.png"
 import BurgerMenu from "../BurgerMenu/BurgerMenu"
 
 

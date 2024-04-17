@@ -23,31 +23,54 @@ function App() {
     setBurgerOpen(!burgerOpen);
   };
 
-  const [isLoaded, setIsLoaded] = useState(false);
+  
+
+  const canvasRef = useRef(null);
+  const [loadingProgress, setLoadingProgress] = useState(0);
+  const [isLoaded, setIsLoaded] = useState(false); // Track if the content is loaded
+  //gsap timeline
+  let tl = new gsap.timeline({defaults:{ease: 'back.out',}}); //gsap timeline
+  useEffect(() => {
+    const canvas = canvasRef.current;
+    if (!canvas) return;
+
+    // Your WebGL code or any other setup code should go here, referencing 'canvas'.
+  }, []);
+
+  // Define the function to increment loadingProgress
+  const incrementProgress = () => {
+    if (loadingProgress < 100) {
+      setLoadingProgress((prevProgress) => prevProgress + 1);
+    }
+  };
 
   useEffect(() => {
-    const handleLoad = () => {
-      // Set isLoaded to true when all assets are loaded
-      setIsLoaded(true);
-    };
+    window.history.scrollRestoration = 'manual'
+    // Set up a timer to increment loadingProgress
+    const timer = setInterval(incrementProgress, 10);
 
-    // Attach the handleLoad function to the window.onload event
-    window.onload = handleLoad;
-
-    // Cleanup function to remove the event listener when component unmounts
     return () => {
-      window.onload = null;
+      clearInterval(timer); // Clear the interval when the component unmounts
+      setIsLoaded(true);
+      // Use loadingProgress in your GSAP animation
+      var fillpercent = `polygon(0 ${100-loadingProgress}%, 100% ${100-loadingProgress}%, 100% 100%, 0% 100%)`;
+      tl.to('.loadingtext', { clipPath: fillpercent, duration: 1 });
+      
     };
-  }, []); 
-
-
-
+  }, [loadingProgress]);
 
   
 
- 
-
-  
+  useEffect(() => {
+    if (isLoaded) {
+      // Trigger your GSAP animation when content is loaded (loadingProgress = 100)
+      tl.to('.preloader-container', { opacity: 0, display: 'none', duration: 0, delay: 0, onComplete: () => {
+        
+      } })
+      .from('.logo', {xPercent: -120, opacity: 0, duration: 0.3, })
+      .from('.one , .two , .three', {width: '0%', duration: 0.3, stagger: 0.3,})
+    }
+  }, [isLoaded]);
  
   return (
     <div className="app" style={{background: darkTheme.Primary, color: darkTheme.Secondary}} >
@@ -58,15 +81,7 @@ function App() {
         </Helmet>
         <Mouse></Mouse>
         <Router>
-        <div>
-          {isLoaded ? (
-            <h1>All assets are loaded!</h1>
-          ) : (
-            <h1>Loading...</h1>
-          )}
-          {/* Your website content goes here */}
-        </div>
-        
+        <Preloader />
         <Navs openburger={openburger} burgerOpen={burgerOpen} />
         <Menu openburger={openburger} burgerOpen={burgerOpen} />
         <Routes>
