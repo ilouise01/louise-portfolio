@@ -8,21 +8,5 @@
     justify-content: center;
     align-items: center;
     z-index: 10;
-  }
-  .text-container{
-    display: flex;
-    justify-content: space-between;
-    flex-direction: row;
-  }
-  .loadingtext{
-    clip-path: polygon(0 100%, 100% 100%, 100% 100%, 0% 100%);
-    display: flex;
-  }
-  .below{
-    position: absolute;
-    opacity: 0.1;
-    display: flex;
-  }
-  .loadingtext, .below{
-    font-family: mons;
+    opacity: 0.5;
   }
