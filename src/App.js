@@ -29,8 +29,8 @@ function App() {
     const preloadAssets = async () => {
       try {
         // Preload image using fetch
-        await fetch('./assets/image/me.png');
-        await fetch('./assets/image/banner1080.png');
+        await fetch('./assets/image/me-min.png');
+        await fetch('./assets/image/banner1080-min.png');
         
         
         

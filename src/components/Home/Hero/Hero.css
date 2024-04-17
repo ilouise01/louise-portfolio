@@ -3,7 +3,7 @@
   height: 100lvh;
   background: 
   linear-gradient(to bottom, rgba(0, 0, 0, 0),rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.9)),
-  url('../../../assets/image/banner1080.png');
+  url('../../../assets/image/banner1080-min.png');
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
