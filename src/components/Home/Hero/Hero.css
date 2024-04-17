@@ -54,7 +54,7 @@
 @media only screen and (max-width: 500px) {
   /* Adjust styles here */
   .hero{
-    background-size: 450%;
+    background-size: 375%;
     background-position: 65% 100%;
   }
   .louise h1 .word{

@@ -26,19 +26,24 @@ function App() {
   const [isLoaded, setIsLoaded] = useState(false);
 
   useEffect(() => {
-    const handleLoad = () => {
-      // Set isLoaded to true when all assets are loaded
-      setIsLoaded(true);
+    const preloadAssets = async () => {
+      try {
+        // Preload image using fetch
+        await fetch('./assets/image/me.png');
+        await fetch('./assets/image/banner1080.png');
+        
+        
+        
+        // Set isLoaded to true when all assets are loaded
+        setIsLoaded(true);
+      } catch (error) {
+        console.error('Error preloading image:', error);
+        setIsLoaded(true); // Proceed even if there's an error
+      }
     };
-
-    // Attach the handleLoad function to the window.onload event
-    window.onload = handleLoad;
-
-    // Cleanup function to remove the event listener when component unmounts
-    return () => {
-      window.onload = null;
-    };
-  }, []); 
+  
+    preloadAssets();
+  }, []);
 
 
 
@@ -57,21 +62,12 @@ function App() {
             {/* Add more meta tags as needed */}
         </Helmet>
         <Mouse></Mouse>
+        <Preloader isLoaded={isLoaded} />
         <Router>
-        <div>
-          {isLoaded ? (
-            <h1>All assets are loaded!</h1>
-          ) : (
-            <h1>Loading...</h1>
-          )}
-          {/* Your website content goes here */}
-        </div>
-        
         <Navs openburger={openburger} burgerOpen={burgerOpen} />
         <Menu openburger={openburger} burgerOpen={burgerOpen} />
         <Routes>
           <Route exact path="/" element={<Home />} />
-          <Route exact path="/louise-portfolio" element={<Home />} />
           <Route exact path="/works" element={<Works />} />
           <Route exact path="/about" element={<About />} />
         </Routes>
