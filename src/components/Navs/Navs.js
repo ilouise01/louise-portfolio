@@ -28,7 +28,7 @@ function Navs({openburger, burgerOpen}) {
   return (
         <div className='navs'>
             <BurgerMenu openburger={openburger} burgerOpen={burgerOpen}/>
-            <h5 className='navlouise mons' style={{WebkitTextStrokeColor: darkTheme.Secondary, }}>LOUISE</h5>
+            <h4 className='navlouise mons' style={{WebkitTextStrokeColor: darkTheme.Secondary, }}>LOUISE</h4>
             <div className='socials-container'>
                 <FontAwesomeIcon icon={faGithub} size='2xl'/>
                 <FontAwesomeIcon icon={faLinkedin} size='2xl'/>

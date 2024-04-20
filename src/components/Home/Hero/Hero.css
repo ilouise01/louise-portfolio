@@ -51,10 +51,10 @@
 }
 
 /* For mobile devices */
-@media only screen and (max-width: 500px) {
+@media only screen and (max-width: 670px) {
   /* Adjust styles here */
   .hero{
-    background-size: 375%;
+    background-size: 400%;
     background-position: 65% 100%;
   }
   .louise h1 .word{

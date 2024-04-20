@@ -1,33 +1,56 @@
 import React, { useEffect } from 'react';
 import { gsap } from 'gsap';
 import './Preloader.css'
+import { useGSAP } from '@gsap/react'
+import SplitType from 'split-type'
 
 const Preloader = ({ isLoaded }) => {
+
+
+
   useEffect(() => {
+
+    const plouise = new SplitType('.loadertext', {types: 'words, chars'});
+    const plouisechars = plouise.chars;
+
     const body = document.body;
+    
+    body.classList.add('disable-scroll')
+  
+    
+    var ploader = gsap.timeline({ease: 'none',duration: 2,});
+    
+
+
     if (!isLoaded) {
       // Animation for while loading
-      gsap.to('.preloader', { opacity: 1,});
-      body.classList.add('disable-scroll')
-      
     } else {
       // Animation for when done loading
-      gsap.to('.preloader', { opacity: 0, duration: 1, onComplete: () => {
-        gsap.to('.preloader', { display: 'none',});
+      gsap.to('.preloader1', { opacity: 0, onComplete: () => {
+        
+        ploader.addLabel("start")
+        ploader.to('.loadertext .word .char', { translateY: '-10rem', opacity: 0, stagger: 0.02,}, 'start')
+        ploader.to('.preloader__spinner', { opacity: 0,}, 'start')
+        ploader.to('.preloader', { top: '-100%',}, '<+=0.5')
+        ploader.fromTo('.louise h1 .word .char', {translateY:'10rem', opacity: 0,}, {translateY:'0rem', opacity: 1, stagger: 0.02})
+        ploader.fromTo('.dnd h4 strong .word .char, .dnd h4 .word .char', {translateY:'3rem', opacity: 0,}, {translateY:'0rem', opacity: 1,}, )
+
+        body.classList.remove('disable-scroll')
         
       } });
-      body.classList.remove('disable-scroll')
     }
   }, [isLoaded]);
 
   return (
     <div className="preloader">
       {/* Your preloader content */}
-      <h3 className='mons' style={{color: 'white'}}>Hi there, I'm</h3>
-      <h1 className='mons' style={{color: 'white'}}>LOUISE</h1>
-      <h5 className='mons' style={{color: 'white'}}>I'm a freelance web developer</h5>
-      <div className='preloader__spinner'></div>
-      <p className='mons' style={{color: 'white'}}>loading assets please wait</p>
+      <div className='pl-container'>
+        
+        <h1 className='mons loadertext' style={{color: 'white'}}>LOUISE</h1>
+        <h3 className='mons loadertext' style={{color: 'white'}}>PORTFOLIO</h3>
+        <div className='preloader__spinner'></div>
+
+      </div>
     </div>
   );
 };
