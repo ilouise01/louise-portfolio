@@ -15,7 +15,7 @@ const Preloader = ({ isLoaded }) => {
 
     const body = document.body;
     
-    body.classList.add('disable-scroll')
+    
   
     
     var ploader = gsap.timeline({ease: 'none',duration: 2,});
@@ -26,15 +26,13 @@ const Preloader = ({ isLoaded }) => {
       // Animation for while loading
     } else {
       // Animation for when done loading
-      gsap.to('.preloader1', { opacity: 0, onComplete: () => {
-        
         ploader.addLabel("start")
         ploader.to('.loadertext .word .char', { translateY: '-10rem', opacity: 0, stagger: 0.02,}, 'start')
         ploader.to('.preloader__spinner', { opacity: 0,}, 'start')
         ploader.to('.preloader', { top: '-100%',}, '<+=0.5')
         ploader.fromTo('.louise h1 .word .char', {translateY:'10rem', opacity: 0,}, {translateY:'0rem', opacity: 1, stagger: 0.02})
-        ploader.fromTo('.dnd h4 strong .word .char, .dnd h4 .word .char', {translateY:'3rem', opacity: 0,}, {translateY:'0rem', opacity: 1,}, )
-
+        ploader.fromTo('.dnd h4 strong .word .char, .dnd h4 .word .char', {translateY:'3rem', opacity: 0,}, {translateY:'0rem', opacity: 1, }, )
+        ploader.to('.preloader1', { opacity: 0, onComplete: () => {
         body.classList.remove('disable-scroll')
         
       } });

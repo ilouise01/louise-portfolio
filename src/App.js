@@ -14,6 +14,8 @@ import Navs from './components/Navs/Navs';
 import Menu from './components/Menu/Menu';
 
 function App() {
+  const body = document.body;
+  body.classList.add('disable-scroll')
 
   
 
