@@ -14,6 +14,11 @@ function About() {
 
  
     useEffect(() => {
+        var menutransition = gsap.timeline({ease: 'none',duration: 2, delay: 2,});
+        menutransition.fromTo('.abtfloat h1 .word .char', {translateX:'10rem', opacity: 0,}, {translateX:'0rem', opacity: 1, stagger: 0.02}, 'intro')
+        menutransition.fromTo('.il1 .word .char', {translateY:'-10rem', opacity: 0,}, {translateY:'0rem', opacity: 1, }, '>')
+        menutransition.fromTo('.il2 .word .char', {translateY:'10rem', opacity: 0,}, {translateY:'0rem', opacity: 1, }, '>')
+
 
         
     return () => {

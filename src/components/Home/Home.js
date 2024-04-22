@@ -15,8 +15,12 @@ function Home() {
 
  
     useEffect(() => {
-
-        
+      var menutransition = gsap.timeline({ease: 'none',duration: 2, delay: 2,});
+      menutransition.addLabel("intro")
+      menutransition.fromTo('.louise h1 .word .char', {translateY:'10rem', opacity: 0,}, {translateY:'0rem', opacity: 1, stagger: 0.02}, 'intro')
+      menutransition.fromTo('.dnd h4 strong .word .char, .dnd h4 .word .char', {translateY:'3rem', opacity: 0,}, {translateY:'0rem', opacity: 1, }, '>')
+      
+      
     return () => {
       // cleanup code before component unmounts
     };

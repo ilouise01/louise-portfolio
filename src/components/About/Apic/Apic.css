@@ -46,6 +46,9 @@
     font-size: 23vw;
     color: black;
 }
+.ilouise .word{
+    white-space: nowrap;
+}
 
  
 /* For tablets (landscape) */

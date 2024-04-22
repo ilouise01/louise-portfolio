@@ -9,6 +9,7 @@ import { darkTheme } from '../../theme';
 
 
 function Menu({ openburger, burgerOpen }) {
+    var menutransition = gsap.timeline({ease: 'none',duration: 2,});
   
     const menuhover = (event) => {
         const hoveredElement = event.currentTarget;
@@ -35,6 +36,8 @@ function Menu({ openburger, burgerOpen }) {
     const menuclick = (event) => {
         // bring window top of page on menu click
         window.scrollTo(0, 0);
+        
+
     };
 
     
