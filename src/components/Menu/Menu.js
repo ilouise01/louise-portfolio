@@ -8,7 +8,7 @@ import './Menu.css'
 import { darkTheme } from '../../theme';
 
 
-function Menu({ openburger, burgerOpen }) {
+function Menu({ openburger }) {
     var menutransition = gsap.timeline({ease: 'none',duration: 2,});
   
     const menuhover = (event) => {

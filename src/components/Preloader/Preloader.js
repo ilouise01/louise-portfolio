@@ -5,7 +5,7 @@ import { useGSAP } from '@gsap/react'
 import SplitType from 'split-type'
 
 const Preloader = ({ isLoaded }) => {
-
+   
 
 
   useEffect(() => {
@@ -31,19 +31,22 @@ const Preloader = ({ isLoaded }) => {
         ploader.to('.preloader', { top: '-100%',}, '<+=0.5')
 
         
-
-
-
-        ploader.fromTo('.navlouise', {opacity: 0, translateY: '-10rem',}, {opacity: 1, translateY: '0rem'}, )
         
+        
+        
+        
+        ploader.to('.preloader1', { opacity: 0, onComplete: () => {
+          
+          
+        } })
+        
+        ploader.fromTo('.navlouise', {opacity: 0, translateY: '-10rem',}, {opacity: 1, translateY: '0rem'}, )
         ploader.fromTo('.one', {width:'0%',}, {width:'100%', duration: '0.3'}, )
         ploader.fromTo('.two', {width:'0%',}, {width:'100%', duration: '0.3'}, )
         ploader.fromTo('.three', {width:'0%',}, {width:'100%', duration: '0.3'}, )
         
-        ploader.to('.preloader1', { opacity: 0, onComplete: () => {
-        body.classList.remove('disable-scroll')
         
-      } });
+        
     }
   }, [isLoaded]);
 

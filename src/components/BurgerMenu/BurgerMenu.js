@@ -3,7 +3,7 @@ import gsap from 'gsap';
 import './BurgerMenu.css'
 import { darkTheme } from '../../theme';
 
-function BurgerMenu({ openburger, burgerOpen}) {
+function BurgerMenu({ openburger, burgerOpen, menutransition,menutransition2}) {
   
     
 
@@ -90,6 +90,8 @@ function BurgerMenu({ openburger, burgerOpen}) {
 
     burgerOpen ? hamtl.current.play() : hamtl.current.reverse()
     burgerOpen ? menutl.current.play() : menutl.current.reverse()
+    // burgerOpen ? menutransition.play() : menutransition.play()
+    // burgerOpen ? menutransition2.play() : menutransition2.play()
     burgerOpen ? body.classList.add('disable-scroll') : body.classList.remove('disable-scroll')
 
   }, [burgerOpen])

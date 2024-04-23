@@ -16,9 +16,6 @@ import Menu from './components/Menu/Menu';
 function App() {
   const body = document.body;
   body.classList.add('disable-scroll')
-
-  
-
   const [burgerOpen, setBurgerOpen] = useState(false);
 
   const openburger = () => {
@@ -26,8 +23,15 @@ function App() {
   };
 
   const [isLoaded, setIsLoaded] = useState(false);
+  
+  
+      
+  
+
+  
 
   useEffect(() => {
+
     const preloadAssets = async () => {
       try {
         // Preload image using fetch
@@ -67,11 +71,11 @@ function App() {
         <Preloader isLoaded={isLoaded} />
         <Router>
         <Navs openburger={openburger} burgerOpen={burgerOpen} />
-        <Menu openburger={openburger} burgerOpen={burgerOpen} />
+        <Menu openburger={openburger} burgerOpen={burgerOpen}  />
         <Routes>
-          <Route exact path="/" element={<Home />} />
-          <Route exact path="/works" element={<Works />} />
-          <Route exact path="/about" element={<About />} />
+          <Route exact path="/" isLoaded={isLoaded} element={<Home />} />
+          <Route exact path="/works" isLoaded={isLoaded} element={<Works />} />
+          <Route exact path="/about" isLoaded={isLoaded} element={<About />} />
         </Routes>
         </Router>
         
