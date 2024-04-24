@@ -36,7 +36,7 @@ const Preloader = ({ isLoaded }) => {
         
         
         ploader.to('.preloader1', { opacity: 0, onComplete: () => {
-          
+          body.classList.remove('disable-scroll')
           
         } })
         
