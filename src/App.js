@@ -30,6 +30,7 @@ function App() {
   
 
   useEffect(() => {
+    window.history.scrollRestoration = 'manual'
 
     const preloadAssets = async () => {
       try {
