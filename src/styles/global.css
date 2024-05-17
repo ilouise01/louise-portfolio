@@ -15,6 +15,7 @@
 }
 
 html, * {
+    cursor: none;
     font-family: 'Montserrat', sans-serif;
     font-size: 100%;
 }
