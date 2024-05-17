@@ -1,0 +1,42 @@
+.Projects{
+  background-color: black;
+  width: 100lvw;
+}
+.proj-pic{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: black;
+}
+.pp-container{
+  padding-top: 65lvh;
+}
+.p-title{
+  position: absolute;
+  z-index: 2;
+  left: 5lvw;
+  padding-top: 20lvw;
+  width: 20lvw;
+  opacity: 0;
+  transform: translateY(5rem);
+  font-size: 5lvw;
+  color: white;
+  text-shadow: rgba(0, 0, 0, 0.511) 5px 5px 5px;
+}
+.pp{
+  height: 35lvw;
+  width: 65lvw;
+  background-size: cover !important;
+  background-position: center !important;
+  position: relative;
+  border-radius: 1rem;
+}
+
+.section {height: 500px; width: 500px;}
+
+.green {background-color: lightgreen;}
+
+.blue {background-color: lightblue;}
+
+p {font-size: 20pt; padding: 10px}

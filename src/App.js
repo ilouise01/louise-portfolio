@@ -1,6 +1,5 @@
 import React, { useEffect, useRef, useState } from 'react';
 import { BrowserRouter as Router, Route, Routes, useLocation } from 'react-router-dom'
-import { TransitionGroup, CSSTransition } from 'react-transition-group';
 import gsap from 'gsap'; // Import GSAP
 import { darkTheme } from './theme';
 import Home from './components/Home/Home';
