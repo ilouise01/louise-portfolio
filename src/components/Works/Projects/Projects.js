@@ -108,7 +108,7 @@ function Projects() {
           scrollTrigger: {
             //onEnter, onLeave, onEnterBack, onLeaveBack
             toggleActions: "play reverse play reverse",
-            markers: true,
+            markers: false,
             start: '30% center',
             end: 'bottom center',
             trigger: `.${project.pClass}`,
@@ -127,8 +127,10 @@ function Projects() {
   return (
     <div className='Projects'>
         <div className='proj-pic'>
-          <h1 className='mons'>WORKS</h1>
-          <h4> Here are some examples of my work. </h4>
+          <div style={{height: '50lvh', display: 'flex', justifyContent: 'center', alignItems: 'center', flexDirection: 'column'}}>
+            <h1 className='mons'>WORKS</h1>
+            <h4> Here are some examples of my work. </h4>
+          </div>
           {projects.map(projs => (
                   <div style={{height: '60lvw', display: 'flex', justifyContent: 'center', alignItems: 'center'}}>
                     <h2 className={`p-title mons title${projs.pClass}`}>{projs.pName}</h2>
