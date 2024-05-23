@@ -49,7 +49,6 @@ function HeroWorks() {
             start: "top top",
             end: "bottom bottom",
             scrub: 0.3,
-            markers: true,
           }
         });
         workanim.addLabel("start")
@@ -85,8 +84,8 @@ function HeroWorks() {
       <div className='works-wrapper'>
         <div className='works-top'>
           <h2 className='mons'>Selected Works</h2>
-          <h5 style={{fontWeight: 500,}}>Here are some examples of my work.</h5>
-          <p>(Placeholder images used to represent envisioned designs. Actual projects are in progress or pending creation.)</p>
+          <h5 style={{fontWeight: 600,}}>Here are some examples of my work.</h5>
+          <h5 style={{ fontWeight: 500, textAlign: 'center', }}>(Placeholder images used to represent envisioned designs. Actual projects are in progress or pending creation.)</h5>
         </div>
         <div className='works-bottom'>
           <div className='works-row row-1'>

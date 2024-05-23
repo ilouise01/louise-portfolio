@@ -15,9 +15,10 @@
 }
 
 html, * {
-    cursor: none;
+    /* cursor: none !important; */
     font-family: 'Montserrat', sans-serif;
     font-size: 100%;
+    scroll-behavior: smooth;
 }
 .mons *{
     font-family: mons !important;

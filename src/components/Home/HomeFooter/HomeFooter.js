@@ -9,33 +9,7 @@ import { darkTheme } from '../../../theme';
 
 
 function HomeFooter() {
-  gsap.registerPlugin(ScrollTrigger);
-    useGSAP(() =>{
-      let footeranim = gsap.timeline({
-        // yes, we can add it to an entire timeline!
-        scrollTrigger: {
-          trigger: ".hf",
-          start: "top center",
-          end: "bottom bottom",
-          scrub: 0.3,
-        }
-      });
-      footeranim.addLabel("start")
-      footeranim.to(".hf-content",{ height: '84lvh', width: '84vw' }, 'start')
-      
-      let footeranimtext = gsap.timeline({
-        // yes, we can add it to an entire timeline!
-        scrollTrigger: {
-          trigger: ".hf",
-          start: "30% center",
-          end: "bottom bottom",
-          scrub: 2,
-        }
-      });
-      footeranimtext.addLabel("text")
-      footeranimtext.to(".hf-top, .hf-mid, .hf-bot",{ opacity: '1', }, 'start')
   
-    })
 
 
   
@@ -51,6 +25,7 @@ function HomeFooter() {
   }, []);
 
   return (
+      <div className='hf-wrapper' >
         <div className='hf'>
           <div className='hf-content'>
             <div className='hf-top'>
@@ -69,6 +44,7 @@ function HomeFooter() {
             </div>
           </div>
         </div>
+      </div>
         
 
     

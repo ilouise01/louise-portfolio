@@ -12,7 +12,6 @@ import pic5 from '../../../assets/image/projects/p5.png'
 
 import './Project.css'
 import { darkTheme } from '../../../theme';
-import { height } from '@fortawesome/free-brands-svg-icons/fa42Group';
 
 
 function Projects() {
@@ -87,26 +86,29 @@ function Projects() {
       projects.forEach(project => {
 
         gsap.to(`.${project.pClass}`, {
-          height: '45lvw',
-          width: '80lvw',
-          duration: 0.3,
+          height: '43lvw',
+          width: '78lvw',
+          duration: 0.7,
           snap: 0.1,
           scrollTrigger: {
             //onEnter, onLeave, onEnterBack, onLeaveBack
+            scroller: ".Projects",
             toggleActions: "play reverse play reverse",
             markers: false,
-            start: 'top center',
+            start: 'start center',
             end: 'bottom center',
+            markers: 'true',
             trigger: `.${project.pClass}`,
           }
         });
         gsap.to(`.title${project.pClass}`, {
           opacity: 1,
-          duration: 0.3,
+          duration: 0.7,
           translateX: 0,
           snap: 0.1,
           scrollTrigger: {
             //onEnter, onLeave, onEnterBack, onLeaveBack
+            scroller: ".Projects",
             toggleActions: "play reverse play reverse",
             markers: false,
             start: '30% center',
@@ -126,18 +128,20 @@ function Projects() {
 
   return (
     <div className='Projects'>
-        <div className='proj-pic'>
-          <div style={{height: '50lvh', display: 'flex', justifyContent: 'center', alignItems: 'center', flexDirection: 'column'}}>
-            <h1 className='mons'>WORKS</h1>
-            <h4> Here are some examples of my work. </h4>
-          </div>
-          {projects.map(projs => (
-                  <div style={{height: '60lvw', display: 'flex', justifyContent: 'center', alignItems: 'center'}}>
+          <div className='c-overlay'>
+              <div className='c-outer-border c-top-left'></div>
+              <div className='c-outer-border c-top-right'></div>
+              <div className='c-outer-border c-bottom-left'></div>
+              <div className='c-outer-border c-bottom-right'></div>
+            </div>
+            {projects.map(projs => (
+                  <div style={{display: 'flex', justifyContent: 'center', alignItems: 'center', scrollSnapAlign: 'start', height: '100lvh', }}>
                     <h2 className={`p-title mons title${projs.pClass}`}>{projs.pName}</h2>
                     <div className={`pp ${projs.pClass}`} style={{background: `url(${projs.pPic}`}} id={projs.pId}></div>
                   </div>
                   ))}
-        </div>
+
+          
     </div>
     
         
