@@ -15,7 +15,7 @@ function BurgerMenu({ openburger, burgerOpen, menutransition,menutransition2}) {
         gsap.to('.trail' ,{borderColor: 'transparent',});
         gsap.to('.ball',{backgroundColor: 'transparent',});
         gsap.to('.trail',{backgroundColor: 'transparent',});
-        gsap.to('.trail' ,{backgroundColor: '#ffffff', opacity: '0.2', height: '35px', width: '35px',});
+        gsap.to('.trail' ,{backgroundColor: '#ffffff', opacity: '0.5', height: '35px', width: '35px',});
         
     }
     function burgerleave(){
