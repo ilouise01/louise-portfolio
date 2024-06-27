@@ -60,15 +60,15 @@
 }
 
 #wc1{
-    background-image: url('../../../assets/image/sampleweb/1 (1).png');
+    background-image: url('../../../assets/image/projects/Louise.png');
     background-size: cover;
-    background-position: center;
+    background-position: top center;
 }
 
 #wc2{
-    background-image: url('../../../assets/image/sampleweb/1 (2).png');
+    background-image: url('../../../assets/image/projects/Easybank.png');
     background-size: cover;
-    background-position: center;
+    background-position: top center;
 }
 
 #wc3{
