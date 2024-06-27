@@ -21,6 +21,9 @@ function MyComponent(props) {
     const scrollX = window.pageXOffset;
     const scrollY = window.pageYOffset;
 
+
+    
+
     gsap.to('#ball', {
       duration: 0,
       x: mouseX - scrollX,
@@ -38,12 +41,27 @@ function MyComponent(props) {
       overwrite: 'auto',
       stagger: 0,
     });
+
+    gsap.to('#mViewtextContainer', {
+      duration: 0.3,
+      x: mouseX - scrollX,
+      y: mouseY - scrollY,
+      ease: 'elastic.out(1, 0.3)',
+      overwrite: 'auto',
+      stagger: 0,
+    });
+
+    
   };
 
   return (
     <div>
       <div className="ball" id="ball"></div>
-      <div className="ball trail" id="trail"></div>
+      <div className='ball' id='mViewtextContainer'>
+        <h6 id='mViewtext'>VIEW</h6>
+      </div>
+      <div className="ball trail" id="trail">
+      </div>
     </div>
   );
 }

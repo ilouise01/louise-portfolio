@@ -16,7 +16,24 @@
   height: 15px;
   width: 15px;
   background-color: transparent;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 
+}
+#mViewtextContainer{
+  position: fixed;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 31;
+  background-color: red;
+}
+#mViewtext{
+  display: flex;
+  opacity: 0;
+  font-weight: bold;
+  color: black;
 }
 
 /* For tablets (portrait) */
