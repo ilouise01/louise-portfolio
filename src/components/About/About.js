@@ -20,7 +20,7 @@ function About({ isLoaded }) {
         start: "top center",
         end: "bottom bottom",
         scrub: 0.3,
-        markers: 'true',
+        markers: 'false',
       }
     });
     footeranim.addLabel("start")

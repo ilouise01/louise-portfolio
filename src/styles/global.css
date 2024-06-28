@@ -168,3 +168,11 @@ small, .text_small {
   .disable-scroll {
     overflow: hidden;
   }
+
+  .gsap-marker-end , 
+  .gsap-marker-start,
+  .gsap-marker-scroller-end, 
+  .gsap-marker-scroller-start
+  {
+    display: none !important;
+  }
