@@ -31,11 +31,11 @@ function HeroAbout({timeline}) {
           trigger: ".heroabout",
           start: "top 50%",
           end: "bottom bottom",
-          scrub: 0.3,
+          scrub: 0.7,
         }
       });
       hanim.addLabel("start")
-      hanim.to('.ha-bottom h2 .word .char',{opacity: 1, stagger: 0.05,})
+      hanim.to('.ha-bottom h2 .word .char',{opacity: 1, stagger: 0.3,})
       
 
 

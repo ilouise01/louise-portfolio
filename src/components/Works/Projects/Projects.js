@@ -9,6 +9,9 @@ import pic2 from '../../../assets/image/projects/p2.png'
 import pic3 from '../../../assets/image/projects/p3.png'
 import pic4 from '../../../assets/image/projects/p4.png'
 import pic5 from '../../../assets/image/projects/p5.png'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faCircleUser, faDatabase } from '@fortawesome/free-solid-svg-icons'
+import { faHtml5, faCss3Alt, faJs, faReact, faPhp, faBootstrap  } from '@fortawesome/free-brands-svg-icons'
 
 import './Project.css'
 import { darkTheme } from '../../../theme';
@@ -22,20 +25,28 @@ function Projects() {
       {
         pId: 1,
         pClass: 'pone',
-        pName: 'LOUISE PORTOFOLIO',
+        pName: 'LOUISE',
         pPic: LouisePortfolio,
+        pInfo: 'PORTFOLIO WEBSITE',
+        pDate: '2024',
         enterAnim: 'enteranim1',
         exitAnim: 'exitanim1',
         Link: 'https://ilouise.vercel.app/',
+        technologies: ['html5', 'css', 'react', 'javascript', 'gsap' ],
+        pDesc: 'Interactive personal portfolio showcasing web development projects and skills'
       },
       {
         pId: 2,
         pClass: 'ptwo',
-        pName: 'EASYBANK LANDINGPAGE',
+        pName: 'EASYBANK',
         pPic: EasyBank,
+        pInfo: 'LANDING PAGE',
+        pDate: '2024',
         enterAnim: 'enteranim2',
         exitAnim: 'exitanim2',
         Link: 'https://ilouise-easybank.vercel.app/',
+        technologies: [ 'html5', 'css', 'react', 'javascript', ],
+        pDesc: 'Modern landing page for a banking app, emphasizing clean design, and responsive layout',
       },
       // {
       //   pId: 3,
@@ -105,8 +116,8 @@ function Projects() {
       projects.forEach(project => {
 
         gsap.to(`.${project.pClass}`, {
-          height: '43lvw',
-          width: '78lvw',
+          height: '35lvw',
+          width: '62lvw',
           duration: 0.7,
           snap: 0.1,
           scrollTrigger: {
@@ -119,6 +130,69 @@ function Projects() {
             trigger: `.${project.pClass}`,
           }
         });
+
+        gsap.to(`.tech${project.pClass}`, {
+          opacity:1,
+          translateY: 0,
+          duration: 0.3,
+          snap: 0.1,
+          scrollTrigger: {
+            //onEnter, onLeave, onEnterBack, onLeaveBack
+            scroller: ".Projects",
+            toggleActions: "play reverse play reverse",
+            markers: false,
+            start: 'start center',
+            end: 'bottom center',
+            trigger: `.${project.pClass}`,
+          }
+        });
+        gsap.to(`.desc${project.pClass}`, {
+          opacity:1,
+          translateY: 0,
+          duration: 0.3,
+          snap: 0.1,
+          scrollTrigger: {
+            //onEnter, onLeave, onEnterBack, onLeaveBack
+            scroller: ".Projects",
+            toggleActions: "play reverse play reverse",
+            markers: false,
+            start: 'start center',
+            end: 'bottom center',
+            trigger: `.${project.pClass}`,
+          }
+        });
+        gsap.to(`.info${project.pClass}`, {
+          opacity:1,
+          translateY: 0,
+          duration: 0.3,
+          snap: 0.1,
+          scrollTrigger: {
+            //onEnter, onLeave, onEnterBack, onLeaveBack
+            scroller: ".Projects",
+            toggleActions: "play reverse play reverse",
+            markers: false,
+            start: 'start center',
+            end: 'bottom center',
+            trigger: `.${project.pClass}`,
+          }
+        });
+        gsap.to(`.date${project.pClass}`, {
+          opacity:1,
+          translateY: 0,
+          duration: 0.3,
+          snap: 0.1,
+          scrollTrigger: {
+            //onEnter, onLeave, onEnterBack, onLeaveBack
+            scroller: ".Projects",
+            toggleActions: "play reverse play reverse",
+            markers: false,
+            start: 'start center',
+            end: 'bottom center',
+            trigger: `.${project.pClass}`,
+          }
+        });
+
+        
         gsap.to(`.title${project.pClass}`, {
           snap: 0.1,
           scrollTrigger: {
@@ -179,6 +253,42 @@ function Projects() {
               <div className='c-outer-border c-top-right'></div>
               <div className='c-outer-border c-bottom-left'></div>
               <div className='c-outer-border c-bottom-right'></div>
+                  {projects.map(projs => (
+                    <div className={`technologies-info tech${projs.pClass}`}>
+                      
+                        {projs.technologies.map((tech, index) => (
+                          <div className='tech-pill'>
+                            <h6>{tech}</h6>
+                          </div>
+                        ))}
+
+                        
+                    </div>
+                  ))}
+                  {projects.map(projs => (
+                    <div className={`p-desc desc${projs.pClass}`}>
+                      
+                        
+                            <h5>{projs.pDesc}</h5>
+                        
+                    </div>
+                  ))}
+                  {projects.map(projs => (
+                    <div className={`p-info info${projs.pClass}`}>
+                      
+                        
+                            <h4>{projs.pInfo}</h4>
+                        
+                    </div>
+                  ))}
+                  {projects.map(projs => (
+                    <div className={`p-date date${projs.pClass}`}>
+                      
+                        
+                            <h4>{projs.pDate}</h4>
+                        
+                    </div>
+                  ))}
             </div>
             <div className='c-inner-overlay'>
               <div className='proj-name'>
