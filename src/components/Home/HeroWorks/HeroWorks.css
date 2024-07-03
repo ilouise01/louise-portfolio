@@ -1,16 +1,22 @@
 .heroworks{
     display: flex;
-    height: 200lvh;
+    height: 300lvh;
     width: 100vw;
     justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    position: relative;
 }
 .works-wrapper{
     display: flex;
+    position: sticky;
+    top: 0;
     height: 100%;
     width: 95%;
     /* background-color: slateblue; */
     position: relative;
     clip-path: inset(0);
+    
 }
 .works-top{
     display: flex;
@@ -114,16 +120,21 @@
 }
 
 .more-works{
+    opacity: 1;
+    height: 50lvh;
+    padding-bottom: 25lvh;
+    align-self: flex-start;
+    top: 0;
+    z-index: 2;
     display: flex;
     flex-direction: column;
-    justify-content: space-around;
+    justify-content: center;
     align-items: center;
-    height: 30lvh;
-    margin-bottom: 20lvh;
 }
 Link{
     text-decoration: none;}
 .works-button{
+    opacity: 0;
     background-color: transparent;
     color: white;
     padding: 1rem 2rem;
@@ -142,11 +153,17 @@ Link{
 .works-button:hover{
     box-shadow: inset 0px 0px 0px 1px rgba(255, 255, 255, 0);
 }
+.explore{
+    transform: translateY(-20rem);    
+}
 
 
 
 /* For mobile devices */
 @media only screen and (max-width: 500px) {
+    .heroworks{
+    height: 200lvh;
+    }
     /* Adjust styles here */
     .works-row{
         height: 100%;

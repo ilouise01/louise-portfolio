@@ -3,6 +3,7 @@ import gsap from 'gsap';
 import { ScrollTrigger } from 'gsap/dist/ScrollTrigger';
 import { useGSAP } from '@gsap/react';
 import { Link } from 'react-router-dom';
+import SplitType from 'split-type'
 
 import './HeroWorks.css';
 import { darkTheme } from '../../../theme';
@@ -11,10 +12,24 @@ gsap.registerPlugin(ScrollTrigger);
 
 function HeroWorks() {
   const buttonRef = useRef(null);
+  
 
   useGSAP(() => {
     let mm = gsap.matchMedia();
 
+    let workbtn = gsap.timeline({
+      scrollTrigger: {
+        trigger: ".more-works",
+        start: "top center",
+        end: "bottom bottom",
+        scrub: 0.3,
+      }
+    });
+    workbtn.to(".explore", { opacity: 1, translateY: 0, duration: 1, }, )
+    workbtn.addLabel("btnreveal")
+    workbtn.to(".works-button", {opacity: 1, duration: 0.5, }, 'btnreveal' )
+    workbtn.to(".more-works", {pointerEvents: 'all', duration: 0, }, 'btnreveal')
+ 
     mm.add("(min-width: 501px)", () => {
       // desktop setup code here...
       let workanim = gsap.timeline({
@@ -31,11 +46,16 @@ function HeroWorks() {
       workanim.to(".row-1", { translateX: '0rem' }, 'start')
       workanim.to(".row-2", { translateX: '-10rem' }, 'start')
       workanim.to(".row-3", { translateX: '0rem' }, 'start')
-
+      
+      
+     
       workanim.addLabel("end")
       workanim.to(".row-1", { translateX: '-35rem' }, 'end')
       workanim.to(".row-2", { translateX: '20rem' }, 'end')
       workanim.to(".row-3", { translateX: '-35rem' }, 'end')
+      
+      
+      
     });
 
     mm.add("(max-width: 500px)", () => {
@@ -70,8 +90,8 @@ function HeroWorks() {
         const distanceY = e.clientY - (rect.top + rect.height / 2);
 
         gsap.to(buttonRef.current, {
-          x: distanceX * 3,
-          y: distanceY * 3,
+          x: distanceX * 2.5,
+          y: distanceY * 2.5,
           background: '#00a2e2',
           color: 'black',
           duration: 0.7,
@@ -121,6 +141,7 @@ function HeroWorks() {
   return (
     <>
       <div className='heroworks'>
+        
         <div className='works-wrapper'>
           <div className='works-top'>
             <h2 className='mons'>Selected Works</h2>
@@ -144,12 +165,16 @@ function HeroWorks() {
               <div className='work-canvas' id='wc9'></div>
             </div>
           </div>
+          
         </div>
+        
+        
       </div>
-      <div className='more-works'>
-        <h4 style={{textAlign: 'center'}}>Explore all of my work by clicking the button below!</h4>
-        <button className='works-button' ref={buttonRef}><Link style={{textDecoration: 'none'}}  to="/works" ><h5 className='works-btn-text'>More works</h5></Link></button>
-      </div>
+      <div className='more-works' style={{pointerEvents: 'none'}}>
+        <h3 className='mons explore' style={{textAlign: 'center', marginBottom: '5rem',opacity: 0,}}>EXPLORE ALL OF MY WORKS</h3>
+        <button className='works-button' ref={buttonRef}><Link style={{textDecoration: 'none',}}  to="/works" ><h5 className='works-btn-text'>More works</h5></Link></button>
+        </div>
+      
     </>
   );
 }
