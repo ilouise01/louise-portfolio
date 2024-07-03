@@ -1,7 +1,7 @@
 .navs{
 height: 100lvh;
 width: 100vw;
-z-index: 25;
+z-index: 31;
 position: fixed;
 top: 0;
 pointer-events: none;
@@ -20,9 +20,9 @@ pointer-events: none;
     position: fixed;
     bottom: 5lvh;
     left: 3.6rem;
-    height: 10rem;
+    height: 12rem;
     border-radius: 25rem;
-    border: white solid 1px;
+    border: white solid 0px;
     display: flex;
     flex-direction: column;
     justify-content: space-between;

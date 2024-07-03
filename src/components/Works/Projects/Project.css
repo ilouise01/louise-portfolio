@@ -50,7 +50,7 @@ p {font-size: 20pt; padding: 10px}
 .c-outer-border{
   height: 5rem;
   width: 10rem;
-  border: rgba(255, 255, 255, 0.3) solid;
+  border: rgba(255, 255, 255, 1) solid;
   position: absolute;
 }
 .c-inner-border{
