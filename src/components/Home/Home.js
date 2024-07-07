@@ -26,7 +26,7 @@ function Home() {
         }
       });
       footeranim.addLabel("start")
-      footeranim.to(".hf-content",{ height: '84lvh', width: '84vw' }, 'start')
+      footeranim.to(".hf-content",{ height: '90lvh', width: '84vw' }, 'start')
       
       let footeranimtext = gsap.timeline({
         // yes, we can add it to an entire timeline!
