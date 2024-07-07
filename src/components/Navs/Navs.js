@@ -97,7 +97,7 @@ function Navs({ openburger, burgerOpen, menutransition, menutransition2 }) {
           className='navicon'
           icon={faCircleUser}
           size='2xl'
-          onClick={() => handleIconClick('/Ivan_Louise_Delgado_CV.pdf', '_blank')}
+          onClick={() => window.open('/Ivan_Louise_Delgado_CV.pdf', '_blank')}
         />
       </div>
     </div>
