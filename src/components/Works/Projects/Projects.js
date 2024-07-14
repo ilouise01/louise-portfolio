@@ -3,6 +3,8 @@ import gsap from 'gsap';
 import { ScrollTrigger } from 'gsap/dist/ScrollTrigger';
 import SplitType from 'split-type'
 import LouisePortfolio from '../../../assets/image/projects/Louise.png'
+import LouisePortfolio1 from '../../../assets/image/projects/Louise1.png'
+import LouisePortfolio2 from '../../../assets/image/projects/Louise2.png'
 import EasyBank from '../../../assets/image/projects/Easybank.png'
 import pic1 from '../../../assets/image/projects/p1.png'
 import pic2 from '../../../assets/image/projects/p2.png'
@@ -112,6 +114,67 @@ function Projects() {
     
  
     useEffect(() => {
+      var tl = gsap.timeline({ repeat: -1, yoyo: 'true', ease: 'power3.inOut', });
+      
+      tl.to('.pp', {
+        duration: 0.5,
+        opacity: 0,
+      });
+
+      tl.to('.pp', {
+        duration: 0,
+        onUpdate: function() {
+          document.querySelector('.pp').style.backgroundImage = `linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.2)), url(${LouisePortfolio})`;
+        }
+      });
+
+      tl.to('.pp', {
+        duration: 0.5,
+        opacity: 1,
+      });
+      
+      tl.to('.pp', {
+        duration: 0.5,
+        opacity: 0,
+        delay: 1,
+      });
+      
+      tl.to('.pp', {
+        duration: 0,
+        onUpdate: function() {
+          document.querySelector('.pp').style.backgroundImage = `linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.2)), url(${LouisePortfolio1})`;
+        }
+      });
+      
+      tl.to('.pp', {
+        duration: 0.5,
+        opacity: 1,
+      });
+      
+      tl.to('.pp', {
+        duration: 0.5,
+        opacity: 0,
+        delay: 1,
+      });
+
+      tl.to('.pp', {
+        duration: 0,
+        onUpdate: function() {
+          document.querySelector('.pp').style.backgroundImage = `linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.2)), url(${LouisePortfolio2})`;
+        }
+      });
+
+      tl.to('.pp', {
+        duration: 0.5,
+        opacity: 1,
+      });
+      
+      tl.to('.pp', {
+        duration: 0.5,
+        opacity: 0,
+        delay: 1,
+      });
+     
 
       projects.forEach(project => {
 
