@@ -114,66 +114,7 @@ function Projects() {
     
  
     useEffect(() => {
-      var tl = gsap.timeline({ repeat: -1, yoyo: 'true', ease: 'power3.inOut', });
       
-      tl.to('.pp', {
-        duration: 0.5,
-        opacity: 0,
-      });
-
-      tl.to('.pp', {
-        duration: 0,
-        onUpdate: function() {
-          document.querySelector('.pp').style.backgroundImage = `linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.2)), url(${LouisePortfolio})`;
-        }
-      });
-
-      tl.to('.pp', {
-        duration: 0.5,
-        opacity: 1,
-      });
-      
-      tl.to('.pp', {
-        duration: 0.5,
-        opacity: 0,
-        delay: 1,
-      });
-      
-      tl.to('.pp', {
-        duration: 0,
-        onUpdate: function() {
-          document.querySelector('.pp').style.backgroundImage = `linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.2)), url(${LouisePortfolio1})`;
-        }
-      });
-      
-      tl.to('.pp', {
-        duration: 0.5,
-        opacity: 1,
-      });
-      
-      tl.to('.pp', {
-        duration: 0.5,
-        opacity: 0,
-        delay: 1,
-      });
-
-      tl.to('.pp', {
-        duration: 0,
-        onUpdate: function() {
-          document.querySelector('.pp').style.backgroundImage = `linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.2)), url(${LouisePortfolio2})`;
-        }
-      });
-
-      tl.to('.pp', {
-        duration: 0.5,
-        opacity: 1,
-      });
-      
-      tl.to('.pp', {
-        duration: 0.5,
-        opacity: 0,
-        delay: 1,
-      });
      
 
       projects.forEach(project => {
